@@ -1,9 +1,10 @@
+import { Spreadsheet } from "@/components/spreadsheet";
+import data from "./spreadsheet-data";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Carter's Header</h1>
-      {/* Add stuff here */}
-      Placeholder
-    </div>
+    <main className="min-h-screen bg-white">
+      <Spreadsheet data={data} />
+    </main>
   );
 }

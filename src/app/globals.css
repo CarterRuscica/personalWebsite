@@ -2,32 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* ---- Spreadsheet Chrome ---- */
+
+.spreadsheet-wrapper {
+  background: #fff;
+  overflow: auto;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* ---- Grid ---- */
+
+.spreadsheet-grid {
+  display: grid;
+  background: #fff;
+  min-width: 100%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* ---- Headers ---- */
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+  border-right: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+  user-select: none;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.corner-cell {
+  border-left: none;
+  border-top: none;
+}
+
+.col-header {
+  border-top: none;
+}
+
+.row-header {
+  border-left: none;
+}
+
+/* ---- Data Cells ---- */
+
+.spreadsheet-cell {
+  border-right: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spreadsheet-cell.text-center {
+  align-items: center;
+  text-align: center;
+}
+
+.spreadsheet-cell.text-xs {
+  font-size: 11px;
+}
+
+.empty-cell {
+  background: #fff;
+}
+
+.cell-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.cell-link:hover {
+  filter: brightness(0.95);
+  outline: 2px solid #4a90d9;
+  outline-offset: -2px;
+}
+
+/* ---- Markdown inside cells ---- */
+
+.spreadsheet-cell h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.spreadsheet-cell h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.spreadsheet-cell h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.spreadsheet-cell p {
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+.spreadsheet-cell ul,
+.spreadsheet-cell ol {
+  margin: 2px 0;
+  padding-left: 16px;
+}
+
+.spreadsheet-cell li {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.spreadsheet-cell strong {
+  font-weight: 600;
+}
+
+.spreadsheet-cell em {
+  font-style: italic;
+  color: #555;
+}
+
+.spreadsheet-cell code {
+  font-family: "SF Mono", "Consolas", monospace;
+  font-size: 12px;
+  background: #f0f0f0;
+  padding: 1px 4px;
+  border-radius: 3px;
 }
