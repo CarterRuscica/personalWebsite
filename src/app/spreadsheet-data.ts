@@ -3,14 +3,14 @@ import { SpreadsheetData } from "@/components/spreadsheet";
 const data: SpreadsheetData = {
   title: "Carter Ruscica — Personal Website",
   columns: [
-    { width: "minmax(0, 1fr)" }, // A — left gutter (collapses on narrow)
+    { width: "minmax(0, 4fr)" }, // A — left gutter (collapses on narrow)
     { width: "9fr" },  // B
     { width: "10fr" }, // C
     { width: "10fr" }, // D
     { width: "9fr" },  // E
     { width: "9fr" },  // F
     { width: "9fr" },  // G
-    { width: "minmax(0, 1fr)" }, // H — right gutter (collapses on narrow)
+    { width: "minmax(0, 4fr)" }, // H — right gutter (collapses on narrow)
   ],
   rows: [
     { height: "minmax(48px, auto)" },  // 1 - Name + contact
