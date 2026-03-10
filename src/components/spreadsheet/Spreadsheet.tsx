@@ -13,8 +13,11 @@ export default function Spreadsheet({ data }: SpreadsheetProps) {
   const numCols = data.columns.length;
   const numRows = data.rows.length;
 
-  const gridTemplateColumns = `var(--row-header-w) ${data.columns.map((c) => c.width).join(" ")}`;
-  const gridTemplateRows = `32px ${data.rows.map((r) => r.height).join(" ")}`;
+  const colWidths = data.columns.map((c, i) =>
+    i === 0 || i === data.columns.length - 1 ? "var(--gutter-w)" : c.width
+  );
+  const gridTemplateColumns = `var(--row-header-w) ${colWidths.join(" ")}`;
+  const gridTemplateRows = `var(--col-header-h) ${data.rows.map((r) => r.height).join(" ")}`;
 
   // Track which cells are covered by a merge so we don't render empty cells there
   const covered = new Set<string>();
@@ -88,10 +91,11 @@ export default function Spreadsheet({ data }: SpreadsheetProps) {
             const hasData = data.cells[String(rowNum)]?.[colLetter];
             const isCovered = covered.has(`${rowNum}-${c}`);
             if (hasData || isCovered) return null;
+            const isGutter = c === 0 || c === numCols - 1;
             return (
               <div
                 key={`empty-${r}-${c}`}
-                className="spreadsheet-cell empty-cell"
+                className={`spreadsheet-cell empty-cell${isGutter ? " gutter-cell" : ""}`}
                 style={{ gridColumn: c + 2, gridRow: r + 2 }}
               />
             );

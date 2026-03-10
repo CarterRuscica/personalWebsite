@@ -56,9 +56,19 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`TypeScript` `C++` `Python` `React` `Three.js` `Docker` `Electron` `ROS2` `AWS`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "TypeScript", icon: "devicon-typescript-plain colored" },
+          { label: "C++", icon: "devicon-cplusplus-plain colored" },
+          { label: "Python", icon: "devicon-python-plain colored" },
+          { label: "React", icon: "devicon-react-original colored" },
+          { label: "Three.js", icon: "devicon-threejs-original" },
+          { label: "Docker", icon: "devicon-docker-plain colored" },
+          { label: "Electron", icon: "devicon-electron-original colored" },
+          { label: "ROS2" },
+          { label: "AWS", icon: "devicon-amazonwebservices-plain-wordmark colored" },
+        ],
       },
     },
 
@@ -82,9 +92,18 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`TypeScript` `React` `Java` `GraphQL` `Webpack` `Selenium` `Docker` `AWS`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "TypeScript", icon: "devicon-typescript-plain colored" },
+          { label: "React", icon: "devicon-react-original colored" },
+          { label: "Java", icon: "devicon-java-plain colored" },
+          { label: "GraphQL", icon: "devicon-graphql-plain colored" },
+          { label: "Webpack", icon: "devicon-webpack-plain colored" },
+          { label: "Selenium", icon: "devicon-selenium-original colored" },
+          { label: "Docker", icon: "devicon-docker-plain colored" },
+          { label: "AWS", icon: "devicon-amazonwebservices-plain-wordmark colored" },
+        ],
       },
     },
 
@@ -108,9 +127,17 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`TypeScript` `React` `Java` `GraphQL` `Jest` `Enzyme` `JUnit`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "TypeScript", icon: "devicon-typescript-plain colored" },
+          { label: "React", icon: "devicon-react-original colored" },
+          { label: "Java", icon: "devicon-java-plain colored" },
+          { label: "GraphQL", icon: "devicon-graphql-plain colored" },
+          { label: "Jest", icon: "devicon-jest-plain colored" },
+          { label: "Enzyme" },
+          { label: "JUnit", icon: "devicon-junit-plain colored" },
+        ],
       },
     },
 
@@ -134,9 +161,16 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`Java` `AWS Lambda` `API Gateway` `Step Functions` `DynamoDB` `NoSQL`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "Java", icon: "devicon-java-plain colored" },
+          { label: "Lambda", group: " ", groupIcon: "devicon-amazonwebservices-plain-wordmark colored" },
+          { label: "API Gateway", group: " " },
+          { label: "Step Functions", group: " " },
+          { label: "DynamoDB", group: " " },
+          { label: "NoSQL" },
+        ],
       },
     },
 
@@ -160,9 +194,13 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`Excel` `VBA` `Outlook`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "Excel" },
+          { label: "VBA" },
+          { label: "Outlook" },
+        ],
       },
     },
 
@@ -186,9 +224,12 @@ const data: SpreadsheetData = {
         className: "bg-white",
       },
       F: {
-        content: "`Excel` `Outlook`",
         colSpan: 2,
         className: "bg-white",
+        skills: [
+          { label: "Excel" },
+          { label: "Outlook" },
+        ],
       },
     },
   },

@@ -134,7 +134,7 @@ const data: SpreadsheetData = {
     // ── Fun facts + goat photo ──
     "10": {
       B: {
-        content: "- I've **flown a plane** — a Cessna 152\n- I once **walked a baby goat** on a leash and it was the highlight of my week\n- I am proud of my navigation skills and rarely get _that_ lost.\n     -- There was a time in Japan I almost accidentally stranded myself though.\n- This website is styled as a **spreadsheet** because as much as I hate Excel, I really do think it's a fantastic program!",
+        content: "- I've **flown a plane** a Cessna 152.\n- I once **walked a baby goat** on a leash and it was the highlight of my week.\n- I am proud of my navigation skills and rarely get _that_ lost. However... there was a time in Japan I almost ended up stranded.\n- This website is styled as a **spreadsheet** because as much as I hate Excel, I really do think it's a fantastic program!\n - One of my **signature** dishes to make is risotto.",
         colSpan: 3,
         className: "bg-white",
       },

@@ -6,17 +6,22 @@
 
 :root {
   --row-header-w: 48px;
+  --col-header-h: 32px;
+  --gutter-w: minmax(0, 4fr);
 }
 
 @media (max-width: 768px) {
   :root {
     --row-header-w: 32px;
+    --gutter-w: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --row-header-w: 24px;
+    --row-header-w: 0px;
+    --col-header-h: 0px;
+    --gutter-w: 0px;
   }
 }
 
@@ -428,9 +433,29 @@
 }
 
 @media (max-width: 480px) {
+  /* Hide row/column headers on mobile to reclaim space */
+  :root {
+    --row-header-w: 0px;
+    --col-header-h: 0px;
+    --gutter-w: 0px;
+  }
+
+  .header-cell,
+  .gutter-cell {
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    color: transparent;
+    background: none;
+    width: 0;
+    min-width: 0;
+  }
+
   .spreadsheet-cell {
     padding: 3px 4px;
     font-size: 11px;
+    overflow: visible;
+    word-break: break-word;
   }
 
   .cell-name h1 {
