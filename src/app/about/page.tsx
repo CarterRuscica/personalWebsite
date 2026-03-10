@@ -1,8 +1,8 @@
 import { Spreadsheet, SheetTabs } from "@/components/spreadsheet";
 import data from "./spreadsheet-data";
-import tabs from "./tabs";
+import tabs from "../tabs";
 
-export default function Home() {
+export default function About() {
   return (
     <main className="min-h-screen bg-white flex flex-col pb-[42px]">
       <div className="flex-1">

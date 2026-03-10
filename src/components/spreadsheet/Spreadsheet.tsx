@@ -13,7 +13,7 @@ export default function Spreadsheet({ data }: SpreadsheetProps) {
   const numCols = data.columns.length;
   const numRows = data.rows.length;
 
-  const gridTemplateColumns = `48px ${data.columns.map((c) => c.width).join(" ")}`;
+  const gridTemplateColumns = `var(--row-header-w) ${data.columns.map((c) => c.width).join(" ")}`;
   const gridTemplateRows = `32px ${data.rows.map((r) => r.height).join(" ")}`;
 
   // Track which cells are covered by a merge so we don't render empty cells there
@@ -98,6 +98,9 @@ export default function Spreadsheet({ data }: SpreadsheetProps) {
           })
         )}
       </div>
+
+      {/* Filler area — CSS background draws gridlines, no extra DOM */}
+      <div className="spreadsheet-filler" />
     </div>
   );
 }
