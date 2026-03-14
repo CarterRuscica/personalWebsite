@@ -215,9 +215,10 @@ const data: SpreadsheetData = {
     },
     "14": {
       B: {
-        content: "**P2P Co-op/Versus Game**\n\nMultiplayer web app — *WIP*",
+        content: "**Couple Games**\n\nReal-time multiplayer game platform with room-based matchmaking. Includes Connect Four, Minesweeper Flags, Matching Game, and Word Guesser. Built with Next.js, FastAPI, and SSE.",
         colSpan: 3,
         className: "bg-white",
+        href: "https://games.builtbycarter.ca",
       },
       E: {
         content: "*More projects coming soon...*",
